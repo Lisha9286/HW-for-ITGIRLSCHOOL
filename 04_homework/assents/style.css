@@ -22,7 +22,7 @@ nav ul li:not(:last-child) {
     margin-right: 48px;
 }
 
-.choice {
+.navigation_1 {
     border-bottom: 2px #000 solid;
     padding: 8px;
 }
@@ -30,23 +30,27 @@ nav ul li:not(:last-child) {
 nav ul li a {
     text-decoration: none;
     color: #000;
-    border-bottom: 0px;
-    padding: 8px;
+
 }
 
-nav ul li a:hover {
+.navigation_2:hover,
+.navigation_3:hover {
     border-bottom: 2px #000 solid;
     padding: 8px;
 }
 
+.navigation_2,
+.navigation_3 {
+    padding: 8px;
+}
 
-.h1 {
+.about_me {
     font-family: 'Playfair Display', serif;
     font-size: 35px;
     line-height: 130%;
 }
 
-.p1 {
+.preface {
     font-family: 'Nunito', sans-serif;
     font-size: 24px;
     color: #828282;
@@ -75,7 +79,7 @@ nav ul li a:hover {
     margin-top: 90px;
 }
 
-.container1 {
+.info {
     width: 500px;
 }
 
@@ -85,8 +89,8 @@ nav ul li a:hover {
 
 .contact {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     width: 192px;
     height: 48px;
     margin: 0 auto;

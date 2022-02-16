@@ -1,0 +1,94 @@
+.banner {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(224, 224, 224);
+}
+
+.main_container {
+    width: 60%;
+    background-color: rgb(255, 248, 227);
+}
+
+.main_name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+
+.aside_container {
+    background-color: rgb(221, 236, 203);
+    display: flex;
+    justify-content: center;
+    width: 40%;
+}
+
+.aside_name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex: 1 0 auto;
+}
+
+.two_containers {
+    display: flex;
+    justify-content: center
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 30px;
+    margin: 20px;
+    margin-bottom: 10px;
+    background-color: rgb(254, 234, 185);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.container_3 {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 30px;
+    margin: 20px;
+    margin-top: 10px;
+    background-color: rgb(254, 234, 185);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.footer_containers {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(224, 224, 224);
+    flex: 0 0 auto;
+}
+
+.footer_container {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+    margin: 20px;
+    flex-grow: 1;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
