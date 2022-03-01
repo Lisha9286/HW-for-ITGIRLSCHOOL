@@ -60,6 +60,7 @@ nav ul li {
 .section_01 {
     display: grid;
     grid-template: 354px 118px 115px 49px 23px/ 1fr minmax(548px, 665px) 557px 1fr;
+    margin-bottom: 120px;
 }
 
 .h1 {

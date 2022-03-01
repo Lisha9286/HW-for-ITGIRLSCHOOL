@@ -16,11 +16,47 @@ header {
 }
 
 main {
+    display: grid;
+    grid-template: 1fr 2fr / 1fr;
     background-color: rgb(255, 248, 227);
+    align-items: stretch;
+    justify-items: stretch;
+}
+
+.containers {
+    display: grid;
+    grid-template: 1fr 1fr/ 1fr 1fr;
+    font-size: 24px;
+    font-weight: bold;
+    align-items: stretch;
+    justify-items: stretch;
+}
+
+.container_1,
+.container_2,
+.container_3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(254, 234, 185);
+}
+
+.container_1,
+.container_2 {
+    margin: 20px;
+}
+
+.container_3 {
+    grid-column: 1/3;
+    margin: 0 20px 0;
 }
 
 aside {
+    display: grid;
+    grid-template: 1fr 2fr / 1fr;
     background-color: rgb(221, 236, 203);
+    align-items: stretch;
+    justify-items: stretch;
 }
 
 footer {
