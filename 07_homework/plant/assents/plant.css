@@ -2,8 +2,7 @@
     min-height: 100%;
     display: grid;
     grid-template: minmax(42px, auto) 1fr minmax(168px, auto)/1fr;
-    padding: 0 10px 0 20px;
-    width: 100vw;
+    padding: 0 10px 0 10px;
 }
 
 img {
@@ -167,7 +166,6 @@ nav ul li {
         line-height: 10px;
         padding: 6px 8px 6px 8px;
         border-radius: 2px;
-        width: 50px;
     }
 
     .wrapper {
