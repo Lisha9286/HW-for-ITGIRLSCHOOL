@@ -1,0 +1,46 @@
+.custom_01 {
+    padding: 80px 30px 60px;
+    margin: 25px 0 25px;
+}
+
+.p1 {
+    font-size: 70px;
+}
+
+.rowCustom {
+    margin-bottom: 25px;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 110px;
+    padding-top: 60px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.header {
+    width: 100%;
+    padding: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.logo {
+    font-size: 18px;
+}
+
+.card {
+    height: 100%;
+}
+
+
+.nav1 {
+    color: grey;
+}
+
+.nav1:hover {
+    color: rgb(255, 255, 255);
+}
