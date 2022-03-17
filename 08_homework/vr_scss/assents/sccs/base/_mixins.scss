@@ -1,6 +1,11 @@
 @mixin btn {
+
     background: #5222D0;
     color: white;
     font-family: $base-font;
     text-transform: uppercase;
+}
+
+.btnCuctom {
+    @include btn()
 }
