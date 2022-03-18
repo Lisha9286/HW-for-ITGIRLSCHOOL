@@ -1,0 +1,27 @@
+footer nav ul li a {
+    text-decoration: none;
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: 'Roboto Slab', serif;
+}
+
+footer nav ul li {
+    list-style: none;
+}
+
+footer nav ul {
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+    max-width: 1222px;
+    justify-content: flex-start;
+    column-gap: 34px;
+}
+
+.footer_ul1 {
+    margin: -60px auto 80px;
+}
+
+.footer_ul2 {
+    margin: 86px auto 80px;
+}
