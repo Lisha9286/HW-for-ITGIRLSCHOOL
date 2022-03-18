@@ -81,6 +81,8 @@
     background-image: url(../img/background.png);
     background-position: right;
     background-repeat: no-repeat;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .container {
