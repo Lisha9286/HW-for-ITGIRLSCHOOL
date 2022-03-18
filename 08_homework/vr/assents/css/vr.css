@@ -41,14 +41,14 @@
     padding: 49px 0 33px;
 }
 
-.logo {
+.header__logo {
     display: flex;
     justify-content: space-between;
     width: 180px;
     align-items: center;
 }
 
-.logo__name {
+.header__name {
     font-family: "Intro", sans-serif;
     font-size: 21px;
 }
@@ -57,15 +57,6 @@
     height: 38px;
     width: 115px;
     font-size: 13px;
-}
-
-.container__btn {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 84px;
-    width: 270px;
-    font-size: 35px;
 }
 
 /*main1*/
@@ -92,6 +83,15 @@
 
 .container__text01 {
     margin-bottom: 30px;
+}
+
+.container__btn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 84px;
+    width: 270px;
+    font-size: 35px;
 }
 
 /*main2*/
@@ -121,18 +121,17 @@
 }
 
 .cart02,
-.cart03,
-.cart05 {
+.cart04 {
     padding: 26px 40px 25px 31px;
 }
 
-.cart04 {
+.cart03 {
     padding: 26px 40px 25px 35px;
     border: 1px solid #BB2247;
     margin-right: 16px;
 }
 
-.main2__input-email {
+.input-email {
     background: #EC615B;
     padding: 25px 22px 55px 18px;
     margin: 26px 40px 25px 35px;
@@ -195,10 +194,10 @@ footer nav ul {
     column-gap: 34px;
 }
 
-.ul1 {
+.footer_ul1 {
     margin: -60px auto 80px;
 }
 
-.ul2 {
+.footer_ul2 {
     margin: 86px auto 80px;
 }

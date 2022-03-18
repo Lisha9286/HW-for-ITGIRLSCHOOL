@@ -1,4 +1,16 @@
-@import url(../font/Intro-Regular-Alt.ttf);
+@font-face {
+    font-family: "Intro";
+    src: url("../font/IntroRegular/IntroRegular.ttf");
+}
 
-$base-font: 'Intro-Regular-Alt',
+@font-face {
+    font-family: "Intro";
+    src: url("../font/IntroRegular/IntroRegular.ttf");
+}
+
+$base-font: "Intro",
 sans-serif;
+
+
+$base-font2:'Roboto Slab',
+serif;
