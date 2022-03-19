@@ -19,6 +19,7 @@ a {
 .h1Custom {
     font-family: "Intro", sans-serif;
     font-size: 60px;
+    font-weight: 400;
 }
 
 .card__title {
@@ -28,7 +29,8 @@ a {
     line-height: 36px;
 }
 
-.card__text {
+.card__text,
+.container__content {
     font-family: 'Roboto Slab', serif;
     font-size: 20px;
     font-weight: 300;
@@ -81,8 +83,16 @@ a {
     margin: 0 auto;
 }
 
-.container__text01 {
+.container__content {
     margin-bottom: 30px;
+}
+
+.container__title {
+    margin-bottom: 10px;
+}
+
+.container {
+    max-width: 542px;
 }
 
 .container__btn {
