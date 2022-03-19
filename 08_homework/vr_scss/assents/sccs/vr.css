@@ -1,15 +1,5 @@
 @import url(../css/normalize.css);
 
-@font-face {
-  font-family: "Intro";
-  src: url("../font/IntroRegular/IntroRegular.ttf");
-}
-
-@font-face {
-  font-family: "Intro";
-  src: url("../font/IntroRegular/IntroRegular.ttf");
-}
-
 .btnCuctom {
   background: #5222D0;
   color: white;

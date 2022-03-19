@@ -3,6 +3,11 @@
     src: url("../font/IntroRegular/IntroRegular.ttf");
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 .btnCustom {
     background: #5222D0;
     border-radius: 100px;
@@ -16,14 +21,14 @@
     font-size: 60px;
 }
 
-.h2Custom {
+.card__title {
     font-family: "Intro", sans-serif;
     font-size: 30px;
     font-weight: 400;
     line-height: 36px;
 }
 
-.textCustom01 {
+.card__text {
     font-family: 'Roboto Slab', serif;
     font-size: 20px;
     font-weight: 300;
@@ -76,11 +81,6 @@
     margin: 0 auto;
 }
 
-.container {
-    max-width: 547px;
-    max-height: 436px;
-}
-
 .container__text01 {
     margin-bottom: 30px;
 }
@@ -111,7 +111,7 @@
 
 .main2__container {
     display: grid;
-    grid-template: repeat(3, 1fr)/ repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .cart01 {
@@ -120,8 +120,7 @@
     margin-left: 12px;
 }
 
-.cart02,
-.cart04 {
+.card {
     padding: 26px 40px 25px 31px;
 }
 
@@ -137,7 +136,7 @@
     margin: 26px 40px 25px 35px;
 }
 
-.input-email__head {
+.input-email__title {
     font-family: "Intro", sans-serif;
     font-size: 30px;
     font-weight: 400;
@@ -175,11 +174,14 @@
 /*footer*/
 
 footer nav ul li a {
-    text-decoration: none;
     font-family: 'Roboto Slab', serif;
     font-size: 20px;
     font-weight: 300;
     font-family: 'Roboto Slab', serif;
+}
+
+footer nav .footer_ul1 li a {
+    color: #5222D0;
 }
 
 footer nav ul li {
