@@ -8,7 +8,7 @@ a {
     color: black;
 }
 
-.btnCustom {
+.button-subscribe {
     background: #5222D0;
     border-radius: 100px;
     font-family: "Intro", sans-serif;
@@ -16,7 +16,7 @@ a {
     border: none;
 }
 
-.h1Custom {
+.title {
     font-family: "Intro", sans-serif;
     font-size: 60px;
     font-weight: 400;
@@ -111,7 +111,7 @@ a {
     margin: 0 auto;
 }
 
-.head__main2 {
+.main2__title {
     padding-left: 49px;
 }
 
@@ -124,10 +124,14 @@ a {
     grid-template-columns: repeat(3, 1fr);
 }
 
-.cart01 {
-    padding: 26px 40px 25px 35px;
-    border: 1px solid #BB2247;
+.border1 {
     margin-left: 12px;
+    border: 1px solid #BB2247;
+}
+
+.border2 {
+    border: 1px solid #BB2247;
+    margin-right: 12px;
 }
 
 .card {
@@ -190,11 +194,11 @@ footer nav ul li a {
     font-family: 'Roboto Slab', serif;
 }
 
-footer nav .footer_ul1 li a {
+.footer__menu-first-page li a {
     color: #5222D0;
 }
 
-footer nav ul li {
+nav ul li {
     list-style: none;
 }
 
@@ -206,10 +210,10 @@ footer nav ul {
     column-gap: 34px;
 }
 
-.footer_ul1 {
+.footer__menu-first-page {
     margin: -60px auto 80px;
 }
 
-.footer_ul2 {
+.footer__menu-second-page {
     margin: 86px auto 80px;
 }
