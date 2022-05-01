@@ -1,7 +1,6 @@
-function ask() {
-    let name = prompt('Как тебя зовут?');
-}
 
-function greeting() {
+function ask()
+    {
+    const name = prompt('Как тебя зовут?');
     alert (`Привет, ${name} !`);
-}
+    }
