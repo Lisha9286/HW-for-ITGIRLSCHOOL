@@ -2,5 +2,9 @@ main {
     display: grid;
     gap: 8px;
     margin: 20px;
-    width: 148px;
+    width: 150px;
+}
+
+.calc_btn {
+    width: 34px;
 }
