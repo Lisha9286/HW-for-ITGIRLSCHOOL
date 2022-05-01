@@ -1,0 +1,6 @@
+main {
+    display: grid;
+    gap: 8px;
+    margin: 20px;
+    width: 148px;
+}
