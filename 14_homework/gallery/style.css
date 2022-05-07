@@ -1,0 +1,15 @@
+.arrow {
+    width: 50px;
+}
+
+.img {
+    width: 300px;
+}
+
+.gallery{
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
