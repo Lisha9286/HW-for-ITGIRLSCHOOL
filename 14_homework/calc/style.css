@@ -28,3 +28,7 @@ input::-webkit-inner-spin-button {
 .changeColor {
     background-color: rgb(110, 110, 110);
 }
+
+.calc_name {
+    color: white;
+}
