@@ -1,13 +1,15 @@
+let number_pic = 1
+
 function nextImg() {
-    let img1 = document.getElementById('img1');
-    img1.src = "./img/nature_02.jpg";
-    let img2 = document.getElementById('img2');
-    img2.src = "./img/nature_03.jpg";
+    number_pic = number_pic + 1;  
+    let img_ID = document.getElementById('img_ID');
+    img_ID.src = "./img/nature_0" + number_pic + ".jpg";       
 }
 
+
+
 function previousImg() {
-    let img1 = document.getElementById('img1');
-    img1.src = "./img/nature_01.jpg";
-    let img2 = document.getElementById('img2');
-    img2.src = "./img/nature_02.jpg";
+    number_pic = number_pic - 1;
+    let img_ID = document.getElementById('img_ID');
+    img_ID.src = "./img/nature_0" + number_pic + ".jpg";
 }

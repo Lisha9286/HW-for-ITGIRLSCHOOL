@@ -1,0 +1,66 @@
+body {
+  background-color: #232323;
+  background-image: url(../img/background.png);
+  color: #ffffff;
+}
+
+.header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  margin: 37px 53px 20px 38px;
+}
+
+.header__title {
+  font-family: 'Arsenal', sans-serif;
+  font-size: 50px;
+  line-height: 2px;
+  text-transform: uppercase;
+}
+
+.header__left, .header__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__about, .header__contact {
+  font-family: 'Arsenal';
+  font-size: 25px;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+
+.header__contact {
+  margin-right: 60px;
+}
+
+.header__compet {
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.header__sign {
+  font-family: 'Arsenal';
+  font-style: italic;
+  font-size: 25px;
+  line-height: 21px;
+}
+
+.main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  margin: 0 62px 76px 44px;
+  padding: 8px 8px 8px 8px;
+  background-color: rgba(196, 196, 196, 0.05);
+}
+/*# sourceMappingURL=style.css.map */
