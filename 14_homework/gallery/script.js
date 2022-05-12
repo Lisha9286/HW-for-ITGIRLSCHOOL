@@ -7,7 +7,7 @@ function nextImg() {
 }
 
 function previousImg() {
-    numbePic = numberPic - 1;
+    numberPic = numberPic - 1;
     let img_ID = document.getElementById('img_ID');
-    img_ID.src = "./img/nature_0" + numberPic + ".jpg";    
+    img_ID.src = "./img/nature_0" + numberPic + ".jpg";  
 }
