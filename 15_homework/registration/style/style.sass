@@ -37,8 +37,47 @@ body
         line-height: 21px
 
 .main
-    display: grid
-    grid-template-columns: 50% 50%
     margin: 0 62px 76px 44px
-    padding: 8px 8px 8px 8px
+    padding: 77px 8px 86px 100px
     background-color: rgba(196, 196, 196, 0.05)
+
+.input
+    display: flex
+    flex-direction: column
+    gap: 40px
+    &__title
+        font-family: 'Inter'
+        font-weight: 600
+        font-size: 20px
+        line-height: 24px
+        margin-bottom: 48px
+    &__name,
+    &__email,
+    &__phone,
+    &__address
+        background: transparent
+        border: none
+        border-bottom: 1px #E5E5E599 solid
+        font-size: 18px
+    &__name,
+    &__email,
+    &__phone
+        width: 342px
+    &__address
+        width: 317px
+    &__phone
+        ::placeholder
+            font-size: 18px
+        ::-webkit-outer-spin-button,
+        ::-webkit-inner-spin-button
+            -webkit-appearance: none
+input:focus
+    font-family: 'Inter'
+    font-weight: 400
+    font-size: 18px
+    line-height: 24px
+    color: #E5E5E599
+    background: transparent
+    border: none
+    border-bottom: 1px #E5E5E599 solid
+    outline: 0
