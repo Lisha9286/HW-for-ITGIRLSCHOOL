@@ -51,33 +51,44 @@ body
         font-size: 20px
         line-height: 24px
         margin-bottom: 48px
-    &__name,
-    &__email,
-    &__phone,
-    &__address
+    &__btn
+        width: 197px
+        height: 37px
+        background: #57BF37
+        color: #ffffff
+        border-radius: 50px
+        font-family: 'Inter'
+        font-weight: 400
+        font-size: 18px
+        line-height: 22px
+        border: none
+    &__form
+        font-family: 'Inter'
+        width: 342px
         background: transparent
         border: none
         border-bottom: 1px #E5E5E599 solid
-        font-size: 18px
-    &__name,
-    &__email,
-    &__phone
-        width: 342px
-    &__address
-        width: 317px
-    &__phone
-        ::placeholder
-            font-size: 18px
-        ::-webkit-outer-spin-button,
-        ::-webkit-inner-spin-button
+        font-size: 20px
+        line-height: 24px
+        &::placeholder
+            font-size: 20px
+            line-height: 24px
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button
             -webkit-appearance: none
-input:focus
-    font-family: 'Inter'
-    font-weight: 400
-    font-size: 18px
-    line-height: 24px
-    color: #E5E5E599
-    background: transparent
-    border: none
-    border-bottom: 1px #E5E5E599 solid
-    outline: 0
+        &:focus
+            font-family: 'Inter'
+            font-weight: 400
+            font-size: 20px
+            line-height: 24px
+            color: #E5E5E599
+            background: transparent
+            border: none
+            border-bottom: 1px #E5E5E599 solid
+            outline: 0
+        &:valid
+            font-family: 'Inter'
+            font-weight: 400
+            font-size: 20px
+            line-height: 24px
+            color: #E5E5E599

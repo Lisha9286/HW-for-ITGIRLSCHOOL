@@ -27,10 +27,12 @@
     <main class="main">
         <div class="input">
             <div class="input__title">Fill the Application </div>
-            <input type="text" class="input__name" placeholder="Full Name" />
-            <input type="text" class="input__email" placeholder="Enter Email Address"/>
-            <input type="number" class="input__phone" placeholder="Phone Number">
-            <input type="text" class="input__address" placeholder="Street Address">
+            <input type="text" class="input__form" name="name" id="nameID" placeholder="Full Name" required  />
+            <input type="text" class="input__form" name="email" id="emailID" placeholder="Enter Email Address" required />
+            <input type="number" class="input__form" name="phone" id="phoneID" placeholder="Phone Number" required >
+            <input type="password" class="input__form" name="password" id="passwordID" placeholder="Password" required >
+            <input type="password" class="input__form" name="password" id="confirmID" placeholder="Confirm" required >
+            <button class="input__btn" type="submit" id="btnID">Submit</button>
         </div>
         <div class="cart"></div>
     </main>
