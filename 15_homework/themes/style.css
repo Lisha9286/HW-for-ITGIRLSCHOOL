@@ -1,0 +1,19 @@
+html, body {
+    height: 100%;
+    }
+
+.black {
+    color: aliceblue;
+    background-color: rgb(41, 40, 40);
+}
+
+.white {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}
+
+.rainbow {
+    color: rgb(255, 255, 255);
+    background: linear-gradient(65deg, #ff0000 0%, #ff8c00 17%, #f9ff00 37%, #00ff2f 60%, #001eff 78%, #b000ff 89%);
+    background-repeat: no-repeat;
+}

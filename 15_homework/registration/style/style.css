@@ -145,4 +145,9 @@ body {
   line-height: 24px;
   color: #E5E5E599;
 }
+
+#errorMessege {
+  font-family: 'Inter';
+  color: #cc3333;
+}
 /*# sourceMappingURL=style.css.map */
