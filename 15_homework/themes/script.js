@@ -1,11 +1,17 @@
-darkTheme.onclick = () => {    
-    document.body.classList.toggle("black")
-}
 
-lightTheme.onclick = () => {
-    document.body.classList.toggle("white")
-}
+let oldTheme = document.querySelector('body');
 
-rainbowTheme.onclick = () => {    
-    document.body.classList.toggle("rainbow")
+function changeTheme(selectObject) {
+    let theme = selectObject.value;
+    switch (theme) {
+        case 'rainbowTheme':
+            theme = document.body.classList.toggle("rainbow");
+            break;
+        case 'blackTheme':
+            theme = document.body.classList.toggle("black");
+            break;
+        case 'whiteTheme':
+            theme = document.body.classList.toggle("white");
+            break;
+    }
 }
