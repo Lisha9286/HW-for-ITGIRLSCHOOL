@@ -1,17 +1,23 @@
 
-let oldTheme = document.querySelector('body');
-
-function changeTheme(selectObject) {
+function changeTheme(selectObject) {   
+    let clazz 
+    let oldTheme = document.querySelector('body');
+    oldTheme.classList.remove("white");
+    oldTheme.classList.remove("black");
+    oldTheme.classList.remove("rainbow");
     let theme = selectObject.value;
     switch (theme) {
         case 'rainbowTheme':
-            theme = document.body.classList.toggle("rainbow");
+            document.body.classList.toggle("rainbow");
+            clazz = "rainbow";
             break;
         case 'blackTheme':
-            theme = document.body.classList.toggle("black");
+            document.body.classList.toggle("black");
+            clazz = "black";
             break;
         case 'whiteTheme':
-            theme = document.body.classList.toggle("white");
+            document.body.classList.toggle("white");
+            clazz = "white";
             break;
     }
 }
