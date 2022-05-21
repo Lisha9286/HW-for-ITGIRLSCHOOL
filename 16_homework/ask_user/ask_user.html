@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [];
+        for (;;) {
+            let num = +prompt("Введите число");
+            if (!num) {
+                break
+            }
+            arr.push(num)
+        }
+        arr.sort(function (a, b) {
+            return b - a
+        });
+        alert("Ваши числа:" + arr)
+        let count = 0
+        arr.forEach(element => {
+        count += element
+        });
+        alert("Их сумма:" + count);
+
+    </script>
+</body>
+
+</html>
