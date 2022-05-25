@@ -48,7 +48,7 @@
         <label for="70yo">Больше 70 лет</label>
         <input type="radio" class="age" id="70yo" name="age" value="20000" /><br /><br />
 
-        <button class="checks" type="submit">Узнать стоимость</button>
+        <button class="checks" onClick="window.location.reload();" type="submit">Узнать стоимость</button>
     </div>
     <script>
         const brand = document.querySelector('.brand')
@@ -76,7 +76,6 @@
         })
 
         btn.addEventListener('click', (e) => {
-            e.preventDefault()
             const oil = document.querySelectorAll('.oil')
             oil.forEach((item, index) => {
                 if (item.checked) {
@@ -110,8 +109,6 @@
                 sum += element
             });
             alert("Стоимость вашего авто:" + sum);
-            document.querySelectorAll('input').value = "";
-            calc = []
         })
     </script>
 </body>
