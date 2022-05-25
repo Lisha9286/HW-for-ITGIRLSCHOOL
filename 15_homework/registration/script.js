@@ -24,7 +24,7 @@ function check() {
     } else if (person.resultConfirm.value == '') {
         document.getElementById('errorMessege').innerHTML += "Repeat password!";
     } else if (person.resultConfirm.value != resultPassword.value) {
-        document.getElementById('errorMessege').innerHTML += "Those passwords didn t match. Try again.";
+        document.getElementById('errorMessege').innerHTML += "Those passwords did'n t match. Try again.";
     }
     return person          
 }

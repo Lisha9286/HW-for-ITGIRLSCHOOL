@@ -1,42 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <div>
         <h1>Калькулятор стоимости авто</h1>
-<label>Выберите марку автомобиля</label>
-<select>
-    <option value="">DeLorean</option>
-    <option value="">Plymouth</option>
-    <option value="">Mercury</option>
-    <option value="">Pontiac</option>
-    <option value="">Eagle</option>
-</select><br/><br/>
-<span>Тип топлива:</span><br/>
-<label>бензин </label>
-<input type="radio"/><br/>
-<label>дизель </label>
-<input type="radio"/><br/>
-<label>газ</label>
-<input type="radio"/><br/><br/>
-<label>Объем двигателя, см3</label>
-<input type="number"/><br/><br/>
-<label>Пробег, км</label>
-<input type="number"><br/><br/>
-<span>Возраст автомобиля:</span><br/>
-<label for="">Меньше 3 лет</label>
-<input type="radio"><br/>
-<label for="">От 3 до 5 лет</label>
-<input type="radio"><br/>
-<label for="">От 5 до 7 лет</label>
-<input type="radio"><br/>
-<label for="">Больше 7 лет</label>
-<input type="radio"><br/><br/>
+
+        <select id="brand" class="brand">
+            <option value="car" selected>Выберите марку автомобиля</option>
+            <option value="delorean">DeLorean</option>
+            <option value="plymouth">Plymouth</option>
+            <option value="mercury">Mercury</option>
+            <option value="pontiac">Pontiac</option>
+            <option value="eagle">Eagle</option>
+        </select><br /><br />
+
+        <span>Тип топлива:</span><br />
+        <label for="oil">бензин </label>
+        <input type="radio" class="oil" id="oil" name="fuel" value="1000" /><br />
+        <label for="diesel">дизель </label>
+        <input type="radio" id="diesel" class="oil" name="fuel" value="2000" /><br />
+        <label for="gas">плутоний</label>
+        <input type="radio" id="gas" class="oil" name="fuel" value="5000000" /><br /><br />
+
+        <label for="door">Двери "Чайка"</label>
+        <input type="checkbox" class="extra" id="door" value="1200"><br />
+        <label for="steal">Корпус из неражвеющей стали</label>
+        <input type="checkbox" class="extra" id="steal" value="1000"><br />
+        <label for="dog">Собака с качающейся головой</label>
+        <input type="checkbox" class="extra" id="dog" value="10000"><br /><br />
+
+
+
+        <span>Возраст автомобиля:</span><br />
+        <label for="30yo">Меньше 30лет</label>
+        <input type="radio" class="age" id="30yo" name="age" value="5000"><br />
+        <label for="3050yo">От 30 до 50 лет</label>
+        <input type="radio" class="age" id="3050yo" name="age" value="10000" /><br />
+        <label for="5070yo">От 50 до 70 лет</label>
+        <input type="radio" class="age" id="5070yo" name="age" value="15000" /><br />
+        <label for="70yo">Больше 70 лет</label>
+        <input type="radio" class="age" id="70yo" name="age" value="20000" /><br /><br />
+
+        <button class="checks" type="submit">Узнать стоимость</button>
     </div>
+    <script>
+        const brand = document.querySelector('.brand')
+        const btn = document.querySelector('button')
+        let calc = []
+
+        brand.addEventListener('change', () => {
+            switch (brand.value) {
+                case "delorean":
+                    calc[0] = 20000
+                    break;
+                case "plymouth":
+                    break;
+                    calc[0] = 15000
+                case "mercury":
+                    calc[0] = 10000
+                    break;
+                case "pontiac":
+                    calc[0] = 12000
+                    break;
+                case "eagle":
+                    calc[0] = 24000
+                    break;
+            }
+        })
+
+        btn.addEventListener('click', (e) => {
+            e.preventDefault()
+            const oil = document.querySelectorAll('.oil')
+            oil.forEach((item, index) => {
+                if (item.checked) {
+                    calc.push(+item.value)
+                }
+            })
+
+            const age = document.querySelectorAll('.age')
+            age.forEach((item, index) => {
+                if (item.checked) {
+                    calc.push(+item.value)
+
+                }
+            })
+
+            const extra = document.querySelectorAll('.extra')
+            extra.forEach((item, index) => {
+                if (item.checked) {
+                    calc.push(+item.value)
+
+                }
+            })
+
+            calc.sort(function (a, b) {
+                return a - b
+            });
+            console.log(calc)
+
+            let sum = 0
+            calc.forEach(element => {
+                sum += element
+            });
+            alert("Стоимость вашего авто:" + sum);
+            document.querySelectorAll('input').value = "";
+            calc = []
+        })
+    </script>
 </body>
+
 </html>
