@@ -13,8 +13,14 @@
             margin: 20px;
         }
 
-        button {
+        .btnSend {
             width: 150px;
+        }
+
+        .btnDelete {
+            width: 20px;
+            height: 20px;
+            padding: 0;
         }
 
         .wall {
@@ -31,11 +37,29 @@
 </head>
 
 <body>
-    <h5>Hello</h5>
-    <h5>How are you?</h5>
     <div class="wall"></div><br />
-    <textarea></textarea><br />
-    <button class="btn btn-primary">Send</button>
+    <textarea class="text"></textarea><br />
+    <button class="btnSend btn btn-primary">Send</button>
+
+    <script>
+        let btnSend = document.querySelector('.btnSend')
+        btnSend.addEventListener('click', () => {
+            let comment = document.querySelector('.text').value;
+            console.log(comment)
+
+            document.querySelector('.wall').innerHTML += comment + ' ' +
+                /*'<button class="btnDelete btn btn-secondary">x</button>' +*/ '<br/>';
+
+            const cleanTextarea = document.querySelector('.text');
+            cleanTextarea.value = ''
+
+        })
+
+        //let btnDelete = document.querySelector('.btnDelete')
+        //btnDelete.addEventListener('click', () => {
+
+        //})
+    </script>
 </body>
 
 </html>
