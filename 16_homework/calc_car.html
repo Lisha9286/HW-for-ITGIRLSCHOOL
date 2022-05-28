@@ -48,7 +48,7 @@
         <label for="70yo">Больше 70 лет</label>
         <input type="radio" class="age" id="70yo" name="age" value="20000" /><br /><br />
 
-        <button class="checks" onClick="window.location.reload();" type="submit">Узнать стоимость</button>
+        <button class="checks" type="submit">Узнать стоимость</button>
     </div>
     <script>
         const brand = document.querySelector('.brand')
@@ -61,8 +61,8 @@
                     calc[0] = 20000
                     break;
                 case "plymouth":
-                    break;
                     calc[0] = 15000
+                    break;
                 case "mercury":
                     calc[0] = 10000
                     break;
@@ -109,6 +109,12 @@
                 sum += element
             });
             alert("Стоимость вашего авто:" + sum);
+
+            const inputs = document.querySelectorAll('input')
+            inputs.forEach(item => {
+                item.value = ''
+            })
+            calc = [];
         })
     </script>
 </body>
