@@ -110,10 +110,11 @@
             });
             alert("Стоимость вашего авто:" + sum);
 
-            const inputs = document.querySelectorAll('input')
-            inputs.forEach(i => {
-                i.value = ''
-            })
+            const inputs = document.querySelectorAll("input");
+            inputs.forEach(item => {
+                item.checked = false;
+            });
+
             calc = [];
         })
     </script>
