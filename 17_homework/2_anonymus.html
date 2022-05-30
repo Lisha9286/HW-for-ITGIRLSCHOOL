@@ -49,18 +49,14 @@
 
             let commentChecked = comment.replace(/xxx|viagra/ig, "***")
 
-            document.querySelector('.wall').innerHTML += commentChecked + ' ' +
-                '<button class="btnDelete btn btn-secondary">x</button>' +
+            document.querySelector('.wall').innerHTML += commentChecked + ' ' 
                 '<br/>';
 
             const cleanTextarea = document.querySelector('.text');
             cleanTextarea.value = '';
         })
 
-        let btnDelete = document.querySelector('.btnDelete')
-            btnDelete.addEventListener('click', () => {
-                document.querySelector('.wall').value = '';
-            })
+        
     </script>
 </body>
 
