@@ -10,34 +10,39 @@
 
 <body>
     <script>
-        function formatDate() {
+        let today
+
+        function formatDate(today) {
             let date = new Date();
-            let year = date.getFullYear();
-            let month = date.getMonth() + 1;
-            let day = date.getDate();
-            let hours = date.getHours();
-            let minutes = date.getMinutes();
-            let seconds = date.getSeconds();
-
-            dateNum = Math.round(+date / 1000)
-            console.log(dateNum);
-
-
+            switch (today) {
+                case "now":
+                    alert("прямо сейчас:\n" + new Date(date - 1));
+                    break;
+                case "notnow":
+                    alert("30 сек. назад:\n" + new Date(date - 30 * 1000));
+                    break;
+                case "5min":
+                    alert("5 мин. назад:\n" + new Date(date - 5 * 60 * 1000));
+                    break;
+                case "yesterday":
+                    alert("вчерашняя дата:\n" + new Date(date - 86400 * 100));
+                    break;
+            }
 
         }
-        //alert(formatDate(new Date(new Date() - 1))); // "прямо сейчас"
-        //alert(formatDate(new Date(new Date() - 30 * 1000))); // "30 сек. назад"
-        //alert(formatDate(new Date(new Date() - 5 * 60 * 1000))); // "5 мин. назад"
-        //alert(formatDate(new Date(new Date() - 86400 * 1000))); // вчерашняя дата
-        //formatDate()
+        
+        today = "now"
+        formatDate(today)
 
+        today = "notnow"
+        formatDate(today)
 
+        today = "5min"
+        formatDate(today)
 
-        /*  3. Напишите функцию `formatDate(date)`, форматирующую `date` по следующему принципу: 
-    - Если спустя `date` прошло менее 1 секунды, вывести `"прямо сейчас"`.
-    - В противном случае, если с `date` прошло меньше 1 минуты, вывести `"n сек. назад"`.
-    - В противном случае, если меньше часа, вывести `"m мин. назад"`.
-    - В противном случае, полная дата в формате `"DD.MM.YY HH:mm"`. А именно: `"день.месяц.год часы:минуты"`, всё в виде двух цифр, т.е. `31.12.16 10:00`.*/
+        today = "yesterday"
+        formatDate(today)
+
     </script>
 </body>
 

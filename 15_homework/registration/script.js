@@ -11,8 +11,8 @@ function check() {
         document.getElementById('errorMessege').innerHTML += "Enter Username!";
     } else if (person.resultEmail.value == '') {
         document.getElementById('errorMessege').innerHTML += "Enter email!";
-    } else if (person.resultEmail.value == '/^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i') {
-        //document.getElementById('errorMessege').innerHTML += "Enter correct email!";
+    } else if (person.resultEmail.value != /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i) {
+        document.getElementById('errorMessege').innerHTML += "Enter correct email!";
     } else if (person.resultPhone.value == '') {
         document.getElementById('errorMessege').innerHTML += "Enter phone number!";
     } else if (person.resultPhone.value.length <= 11) {
