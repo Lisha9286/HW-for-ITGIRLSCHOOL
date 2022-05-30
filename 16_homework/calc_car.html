@@ -108,12 +108,16 @@
             calc.forEach(element => {
                 sum += element
             });
+
+            
             alert("Стоимость вашего авто:" + sum);
 
             const inputs = document.querySelectorAll("input");
             inputs.forEach(item => {
                 item.checked = false;
             });
+
+            brand.selectedIndex = 0;
 
             calc = [];
         })
