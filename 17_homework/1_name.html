@@ -12,9 +12,9 @@
     <label for="name">Введите имя</label>
     <input type="text" class="name" name="name" /><br /><br />
     <label for="surname">Введите фамилию</label>
-    <input type="text" id="surname" name="surname" /><br /><br />
+    <input type="text" class="surname" name="surname" /><br /><br />
     <label for="patronymic">Введите отчество</label>
-    <input type="text" id="patronymic" name="patronymic" /><br /><br />
+    <input type="text" class="patronymic" name="patronymic" /><br /><br />
     <button class="btn">Отправить</button>
     <script>
         let btn = document.querySelector('.btn')
@@ -24,11 +24,11 @@
             name = name.replace(/[^a-zа-яё]/gi, '')
             name = name[0].toUpperCase() + name.slice(1).toLowerCase()
 
-            let surname = document.querySelector('#surname').value;
+            let surname = document.querySelector('.surname').value;
             surname = surname.replace(/[^a-zа-яё]/gi, '')
             surname = surname[0].toUpperCase() + surname.slice(1).toLowerCase()
 
-            let patronymic = document.querySelector('#patronymic').value;
+            let patronymic = document.querySelector('.patronymic').value;
             patronymic = patronymic.replace(/[^a-zа-яё]/gi, '')
             patronymic = patronymic[0].toUpperCase() + patronymic.slice(1).toLowerCase()
 
