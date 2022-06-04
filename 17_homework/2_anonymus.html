@@ -49,9 +49,7 @@
 
             let commentChecked = comment.replace(/xxx|viagra/ig, "***")
 
-            document.querySelector('.wall').innerHTML += commentChecked + ' ' +
-                '<button class="btnDelete btn btn-secondary">x</button>' +
-                '<br/>';
+            document.querySelector('.wall').innerHTML += `${commentChecked} <button class="btnDelete btn btn-secondary>x</button> <br/>`;
 
             const cleanTextarea = document.querySelector('.text');
             cleanTextarea.value = '';
