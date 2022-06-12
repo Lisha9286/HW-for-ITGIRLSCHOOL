@@ -5,13 +5,14 @@ function check() {
         resultEmail: document.getElementById('emailID'),
         resultPhone: document.getElementById('phoneID'),
         resultPassword: document.getElementById('passwordID')
-    }   
+    }  
+    let mailFormat = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/
     document.getElementById('errorMessege').innerHTML = "";
     if (person.resultName.value == '') {
         document.getElementById('errorMessege').innerHTML += "Enter Username!";
     } else if (person.resultEmail.value == '') {
         document.getElementById('errorMessege').innerHTML += "Enter email!";
-    } else if (person.resultEmail.value != /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i) {
+    } else if (person.resultEmail.value.match(mailFormat) = false ) {
         document.getElementById('errorMessege').innerHTML += "Enter correct email!";
     } else if (person.resultPhone.value == '') {
         document.getElementById('errorMessege').innerHTML += "Enter phone number!";
