@@ -23,7 +23,7 @@
         document.addEventListener("DOMContentLoaded", function (event) {
             let name = localStorage.getItem('name')
             if (name != null) {
-                document.querySelector('.input_img').value = name;
+                document.querySelector('.input_name').value = name;
             }
         });
 
@@ -38,7 +38,7 @@
                 `<div class="wall__comment"><img src="${userPic}" class="wall__userPic" alt="img"> <div class="userComment"><span class="wall__userName">${userName}:</span> ${commentChecked}</div></div> `;
 
             if (localStorage.getItem('name') == null) {
-                localStorage.setItem(name, userName);
+                localStorage.setItem('name', userName);
             }
 
             const cleanTextarea = document.querySelector('.text');
