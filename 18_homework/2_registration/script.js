@@ -7,14 +7,15 @@ function check() {
         resultPassword: document.querySelector('#passwordID')
     }
 
-    let mailFormat = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/i
-
+    let mailFormat = /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i;
+    let input = document.querySelectorAll('.input__form');
     document.querySelector('#errorMessege').innerHTML = "";
+
     if (person.resultName.value == '') {
         document.querySelector('#errorMessege').innerHTML += "Enter Username!";
     } else if (person.resultEmail.value == '') {
         document.querySelector('#errorMessege').innerHTML += "Enter email!";
-    } else if (input.type == 'email') {
+    } else if (person.resultEmail) {
         if (person.resultEmail.value.match(mailFormat)) {
             return true;
         } else {
