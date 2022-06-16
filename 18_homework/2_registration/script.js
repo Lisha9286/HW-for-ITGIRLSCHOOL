@@ -8,7 +8,6 @@ function check() {
     }
 
     let mailFormat = /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i;
-    let input = document.querySelectorAll('.input__form');
     document.querySelector('#errorMessege').innerHTML = "";
 
     if (person.resultName.value == '') {
