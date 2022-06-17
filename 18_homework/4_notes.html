@@ -18,10 +18,8 @@
             margin: 20px;
         }
 
-        .notes_box {
-            border: 1px rgb(107, 107, 107) solid;
-            max-width: 500px;
-            min-height: 250px;
+        .note_box {
+            min-height: 350px;
             margin-bottom: 10px;
         }
 
@@ -35,27 +33,53 @@
             justify-content: space-between;
             align-items: center;
             padding: 10px;
+            background-color: rgb(225, 255, 230);
+            color: rgb(0, 12, 117);
         }
     </style>
 </head>
 
 <body>
     <h2>Заметки</h2>
-    <div class="notes_box"></div>
-    <textarea class="text_notes"></textarea><br/>
-    <button class="btnSend btn btn-primary">Send</button>
+    <div class="note_box"></div>
+    <textarea class="text_note"></textarea><br />
+    <button onclick="createNote()" class="btnSend btn btn-primary">Send</button>
     <script>
-let btnSend = document.querySelector('.btn');
-btnSend.addEventListener('click', () => {
-    let note = document.querySelector('.text_notes').value
-    document.querySelector('.notes_box').innerHTML += `<div class="note">${note}<img src="cancel.png" alt="cancel" class="delete"/></div>`
-    const cleanNote = document.querySelector('.text_notes')
-    cleanNote.value = '';
-} )
-let btnDelete = document.querySelector('.delete')
-btnDelete.addEventListener('click', () => {
-    document.querySelector('.notes_box').innerHTML = "";
-})
+        const note = document.querySelector('.note_box')
+        let keyName = 0;
+        const addNote = document.querySelector('.text_note')
+
+        function saveNote() {
+            keyName += 1
+            keyNew = keyName.toString()
+
+            if (localStorage.getItem(`${keyNew}`) == null) {
+                localStorage.setItem(`${keyNew}`, `${addNote.value}`);
+            }
+        }
+
+        function createNote() {
+            document.querySelector('.note_box').innerHTML +=
+                `<div class="note">${addNote.value}<img src="cancel.png" alt="cancel" class="delete"/></div>`
+
+            saveNote()
+
+            const cleanTextarea = document.querySelector('.text_note');
+            cleanTextarea.value = '';
+
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            let notes = "";
+            console.log(localStorage.length);
+            for (let i = 0; i < localStorage.length; i++) {
+                let key = localStorage.key(i);
+                if (localStorage.getItem(key) != null) {
+                    notes += `${key}: ${localStorage.getItem(key)}<br>`;
+                }
+            }
+            document.querySelector(".note_box").innerHTML = notes;
+        });
     </script>
 </body>
 

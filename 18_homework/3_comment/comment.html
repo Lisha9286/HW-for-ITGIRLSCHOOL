@@ -16,7 +16,8 @@
     </div><br />
     <input type="text" class="input_name" placeholder="Введите ник"><br />
     <textarea class="text" placeholder="Введите сообщение"></textarea><br />
-    <input type="url" class="input_img" placeholder="Вставьте сюда ссылку на картинку из интернета для аватарки"><br /><br />
+    <input type="url" class="input_img"
+        placeholder="Вставьте сюда ссылку на картинку из интернета для аватарки"><br /><br />
     <button class="btnSend btn btn-primary">Send</button>
 
     <script>
@@ -25,7 +26,13 @@
             if (name != null) {
                 document.querySelector('.input_name').value = name;
             }
+
+            let image = localStorage.getItem('image')
+            if (image != null) {
+                document.querySelector('.input_img').value = image;
+            }
         });
+
 
         let btnSend = document.querySelector('.btnSend')
         btnSend.addEventListener('click', () => {
@@ -41,10 +48,13 @@
                 localStorage.setItem('name', userName);
             }
 
+            if (localStorage.getItem('image') == null) {
+                localStorage.setItem('image', userPic);
+            }
+
             const cleanTextarea = document.querySelector('.text');
             cleanTextarea.value = '';
         })
-
     </script>
 </body>
 
