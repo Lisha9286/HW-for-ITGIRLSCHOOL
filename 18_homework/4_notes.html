@@ -33,6 +33,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 10px;
+            margin: 2px;
             background-color: rgb(225, 255, 230);
             color: rgb(0, 12, 117);
         }
@@ -75,7 +76,7 @@
             for (let i = 0; i < localStorage.length; i++) {
                 let key = localStorage.key(i);
                 if (localStorage.getItem(key) != null) {
-                    notes += `${localStorage.getItem(key)}<br>`;
+                    notes += `<div class="note">${localStorage.getItem(key)}<img src="cancel.png" alt="cancel" class="delete"/></div>`;
                 }
             }
             document.querySelector(".note_box").innerHTML = notes;
