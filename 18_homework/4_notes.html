@@ -50,7 +50,7 @@
         const addNote = document.querySelector('.text_note')
 
         function saveNote() {
-            keyName += 1
+            keyName = localStorage.length
             keyNew = keyName.toString()
 
             if (localStorage.getItem(`${keyNew}`) == null) {
@@ -75,7 +75,7 @@
             for (let i = 0; i < localStorage.length; i++) {
                 let key = localStorage.key(i);
                 if (localStorage.getItem(key) != null) {
-                    notes += `${key}: ${localStorage.getItem(key)}<br>`;
+                    notes += `${localStorage.getItem(key)}<br>`;
                 }
             }
             document.querySelector(".note_box").innerHTML = notes;
