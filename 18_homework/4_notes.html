@@ -47,15 +47,12 @@
     <button onclick="createNote()" class="btnSend btn btn-primary">Send</button>
     <script>
         const note = document.querySelector('.note_box')
-        let keyName = 0;
         const addNote = document.querySelector('.text_note')
-
         function saveNote() {
-            keyName = localStorage.length
-            keyNew = keyName.toString()
-
-            if (localStorage.getItem(`${keyNew}`) == null) {
-                localStorage.setItem(`${keyNew}`, `${addNote.value}`);
+            let keyName = localStorage.length
+            keyName = keyName.toString()
+            if (localStorage.getItem(`${keyName}`) == null) {
+                localStorage.setItem(`${keyName}`, `${addNote.value}`);
             }
         }
 

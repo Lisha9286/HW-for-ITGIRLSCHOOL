@@ -8,6 +8,7 @@ function check() {
     }
 
     const mailFormat = /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i;
+    const phoneFormat = /^\+?(\d{1,3})?[- .]?\(?(?:\d{2,3})\)?[- .]?\d\d\d[- .]?\d\d\d\d$/;
     const showErrorMessege = document.querySelector('#errorMessege');
     document.querySelector('#errorMessege').innerHTML = "";
 
@@ -16,15 +17,14 @@ function check() {
         showErrorMessege.innerHTML += "Enter Username!";
     } else if (person.resultEmail.value == '') {
         showErrorMessege.innerHTML += "Enter email!";
-    } else if (person.resultEmail) {
-        if (person.resultEmail.value.match(mailFormat)) {
-            return true;
-        } else {
-            showErrorMessege.innerHTML += "Enter correct email!"
-            return false;
-        }
+    } else if (!person.resultEmail.value.match(mailFormat)) {
+        showErrorMessege.innerHTML += "Enter correct email!";
+        return false;
     } else if (person.resultPhone.value == '') {
         showErrorMessege.innerHTML += "Enter phone number!";
+    } else if (!person.resultPhone.value.match(phoneFormat)) {
+        showErrorMessege.innerHTML += "Enter correct phone number!";
+        return false;
     } else if (person.resultPhone.value.length <= 11) {
         showErrorMessege.innerHTML += "Enter correct phone number!";
     } else if (person.resultPassword.value == '') {
