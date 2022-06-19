@@ -9,6 +9,7 @@ function check() {
 
     const mailFormat = /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i;
     const phoneFormat = /^\+?(\d{1,3})?[- .]?\(?(?:\d{2,3})\)?[- .]?\d\d\d[- .]?\d\d\d\d$/;
+    const passwordFormat = /^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8,}$/;
     const showErrorMessege = document.querySelector('#errorMessege');
     document.querySelector('#errorMessege').innerHTML = "";
 
@@ -25,12 +26,11 @@ function check() {
     } else if (!person.resultPhone.value.match(phoneFormat)) {
         showErrorMessege.innerHTML += "Enter correct phone number!";
         return false;
-    } else if (person.resultPhone.value.length <= 11) {
-        showErrorMessege.innerHTML += "Enter correct phone number!";
     } else if (person.resultPassword.value == '') {
         showErrorMessege.innerHTML += "Create password!";
-    } else if (person.resultPassword.value.length <= 7) {
-        showErrorMessege.innerHTML += "Use 8 characters or more for your password";
+    } else if (!person.resultPassword.value.match(passwordFormat)) {
+        showErrorMessege.innerHTML += "Passwords must contain:<br/> a minimum of 1 lower case letter [a-z] and<br/> a minimum of 1 upper case letter [A-Z] and<br/> a minimum of 1 numeric character [0-9] and<br/> a minimum of special character.";
+        return false;
     } else if (person.resultConfirm.value == '') {
         showErrorMessege.innerHTML += "Repeat password!";
     } else if (person.resultConfirm.value != resultPassword.value) {
