@@ -46,9 +46,11 @@
         }
 
         function calc() {
+            document.querySelector('#resultValue').innerHTML = "";
             let result
             let firstNumber = document.getElementById('firstNumber').value;
             let secondNumber = document.getElementById('secondNumber').value;
+
             switch (op) {
                 case '+':
                     result = Calculate.sum(firstNumber, secondNumber);
