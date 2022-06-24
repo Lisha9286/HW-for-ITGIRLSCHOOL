@@ -16,7 +16,7 @@ function calc() {
             break;
         case '/':
             result = firstNumber / secondNumber;
-            if (secondNumber = '0') {
+            if (secondNumber = 0) {
                 alert('На ноль делить нельзя!');
             }
             break;
