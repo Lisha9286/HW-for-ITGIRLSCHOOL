@@ -1,9 +1,9 @@
 
 function changeTheme(selectObject) {   
     let oldTheme = document.querySelector('body');
-    oldTheme.classList.remove("white");
-    oldTheme.classList.remove("black");
-    oldTheme.classList.remove("rainbow");
+    oldTheme.classList.remove("white","black","rainbow");
+    //oldTheme.classList.remove("black");
+    //oldTheme.classList.remove("rainbow");
     let theme = selectObject.value;
     switch (theme) {
         case 'rainbowTheme':

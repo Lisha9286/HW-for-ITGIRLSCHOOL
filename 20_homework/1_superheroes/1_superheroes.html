@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="superheroes.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="cards"></div>
+    <script>
+        let superheroesJSON = `[{
+                "universe": "DC Comics",
+                "heroName": "Бэтмен",
+                "realName": "Брюс Уэйн",
+                "frinds": ["Робин", "Бэтгерл"],
+                "superpowers": ["интеллект", "обширные познания", "знания боевых искусств", "ловкость"],
+                "img": "img/Batman.jpg"
+            },
+            {
+                "universe": "DC Comics",
+                "heroName": "Супермен",
+                "realName": "Кларк Кент",
+                "frinds": ["собака Крипто"],
+                "superpowers": [" непробиваемость", "суперсила", "самоисцеление", "суперзрение", "суперслух"],
+                "img": "img/Superman.jpg"
+            },
+            {
+                "universe": "Marvel Comics",
+                "heroName": "Железный человек",
+                "realName": "Тони Старк",
+                "frinds": ["Мстители"],
+                "superpowers": [" высокий уровень интеллекта", "широкие познания науки и техники",
+                    "связь со всемирной паутиной", "бронекостюмы"
+                ],
+                "img": "img/Ironman.jpg"
+            },
+            {
+                "universe": "Marvel Comics",
+                "heroName": "Человек-паук",
+                "realName": "Питер Паркер",
+                "intelligence": "",
+                "frinds": [" Мстители", " Фантастическая четверка", " Люди Икс"],
+                "superpowers": [" сверхчеловеческие рефлексы", " паучье чутье",
+                    " способность прилепляться к твердым поверхностям", " производство паутины"
+                ],
+                "img": "img/Spiderman.jpg"
+            },
+            {
+                "universe": "Marvel Comics",
+                "heroName": "Капитан Америка",
+                "realName": "Стивен Роджерс",
+                "frinds": ["Мстители"],
+                "superpowers": [" сила", " выносливость", " бессмертие", " быстрая регенерация",
+                    "мастерство скрытности и боя"
+                ],
+                "img": "img/CaptainAmerica.jpg"
+            },
+            {
+                "universe": "Marvel Comics",
+                "heroName": "Тор",
+                "realName": "Тор Одинсон",
+                "frinds": ["Мстители"],
+                "superpowers": [" полёт", " способность призывать молнию", " божественное чувство", " магия рун"],
+                "img": "img/Thor.jpg"
+            },
+            {
+                "universe": "Marvel Comics",
+                "heroName": "Халк",
+                "realName": "Брюс Беннер",
+                "frinds": ["Мстители"],
+                "superpowers": [" сверхчеловеческая сила искорость", " выносливость", " Гениальный интеллект"],
+                "img": "img/Hulk.jpg"
+            },
+            {
+                "universe": "DC Comics",
+                "heroName": "Чудо-женщина",
+                "realName": "Диана Принс",
+                "frinds": [" Лига Справедливости", " Бэтмен", " Супермен"],
+                "superpowers": [" сверхчеловеческая сила искорость", " выносливость", " выносливость"],
+                "img": "img/WonderWoman.jpg"
+            },
+            {
+                "universe": "Marvel Comics",
+                "heroName": "Черная вдова",
+                "realName": "Наташа Романофф",
+                "frinds": ["Мстители"],
+                "superpowers": [" пик человеческого физического потенциала", " замедленное старение",
+                    " знание многих языков"
+                ],
+                "img": "img/BlackWidow.jpg"
+            },
+            {
+                "universe": "Marvel Comics",
+                "heroName": "Дэдпул",
+                "realName": "Уэйд Уинстон Уилсон",
+                "frinds": [" Мстители", " Человек-паук", " Росомаха"],
+                "superpowers": [" высокий болевой порог", " регенерация и бессмертие",
+                    " сверхчеловеческая иммунная система"
+                ],
+                "img": "img/deadpoll.jpg"
+            }
+        ]`;
+        document.addEventListener("DOMContentLoaded", function (event) {
+            let superheroes = JSON.parse(superheroesJSON);
+            console.log(superheroes);
+            let superheroCard = "";
+
+            for (superhero of superheroes) {
+                superheroCard += `<div class="card"><div> <img class="img" src="${superhero.img}" alt="superhero"/></div>
+                <div><span class="title">Вселенная:</span> ${superhero.universe}</div>
+                <div><span class="title">Имя:</span> ${superhero.heroName}</div>
+                <div><span class="title">Альтер-Эго:</span> ${superhero.realName}</div>
+                <div><span class="title">Друзья:</span> ${superhero.frinds}</div>
+                <div><span class="title">Суперсилы:</span> ${superhero.superpowers}</div>
+                <div class="rating-area">
+                <input type="radio" id="star-10" name="rating" value="10">
+                <label for="star-10" title="Оценка «10»"></label>	
+                <input type="radio" id="star-9" name="rating" value="9">
+                <label for="star-9" title="Оценка «9»"></label>	
+                <input type="radio" id="star-8" name="rating" value="8">
+                <label for="star-8" title="Оценка «8»"></label>	
+                <input type="radio" id="star-7" name="rating" value="7">
+                <label for="star-7" title="Оценка «7»"></label>	
+                <input type="radio" id="star-6" name="rating" value="6">
+                <label for="star-6" title="Оценка «6»"></label>	
+	            <input type="radio" id="star-5" name="rating" value="5">
+	            <label for="star-5" title="Оценка «5»"></label>	
+	            <input type="radio" id="star-4" name="rating" value="4">
+	            <label for="star-4" title="Оценка «4»"></label>    
+	            <input type="radio" id="star-3" name="rating" value="3">
+	            <label for="star-3" title="Оценка «3»"></label>  
+	            <input type="radio" id="star-2" name="rating" value="2">
+	            <label for="star-2" title="Оценка «2»"></label>    
+	            <input type="radio" id="star-1" name="rating" value="1">
+	            <label for="star-1" title="Оценка «1»"></label>
+                </div></div>`;
+            }
+            document.querySelector('.cards').innerHTML = superheroCard;
+        })
+    </script>
+</body>
+
+</html>

@@ -8,14 +8,14 @@
 "sex": "male",
 "department "pediatric":,
 "date": "02.05.2022"
-}
+},
 {"name": "Лазарева Мериса Фроловна",
 "age": 103,
 "number": 786783,
 "sex": "female",
 "department": "cardiology",
 "date": "27.03.2022"
-}
+},
 {"name": "Журавлёв Вальтер Серапионович",
 "age": 19,
 "number": 524254,
@@ -31,7 +31,7 @@
 "faculty: "math",
 "electives":["math", "programming", "hockey"],
 "yearOfGraduation": 2028,
-"GPA": 4,3}
+"GPA": 4,3},
 
 {"name": "Яковлева Юлиана Максовна",
 "age": 15,
@@ -41,7 +41,7 @@
 "electives":["biochemistry", "genetics", "swiming"]
 "yearOfGraduation",
 "adress": 4,5,
-"GPA": 2024}
+"GPA": 2024},
 
 {"name": "Щербакова Ариадна Эльдаровна",
 "age": 13,
