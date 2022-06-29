@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     <label for="superhero">Ваша оценка:</label>
 	<input id="rate${i}" name="superhero" type="number" max="10"/><br/>
     <button onclick="rating(${i})" class="btn btn-dark calc_btn">Отправить</button>
-    <div id="result${i}">Ваш рейтинг: `+(superhero.rating ? superhero.rating: "")+` </div>
+    <div id="result${i}">Ваш рейтинг: ${superhero.rating ? superhero.rating: ""} </div>
 </div></div>`;
         i++;
     }
