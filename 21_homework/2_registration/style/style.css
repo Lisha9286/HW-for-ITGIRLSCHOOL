@@ -1,0 +1,153 @@
+body {
+  background-color: #232323;
+  background-image: url(../img/background.png);
+  color: #ffffff;
+}
+
+.header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  margin: 37px 53px 20px 38px;
+}
+
+.header__title {
+  font-family: 'Arsenal', sans-serif;
+  font-size: 50px;
+  line-height: 2px;
+  text-transform: uppercase;
+}
+
+.header__left, .header__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__about, .header__contact {
+  font-family: 'Arsenal';
+  font-size: 25px;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+
+.header__contact {
+  margin-right: 60px;
+}
+
+.header__compet {
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.header__sign {
+  font-family: 'Arsenal';
+  font-style: italic;
+  font-size: 25px;
+  line-height: 21px;
+}
+
+.main {
+  margin: 0 62px 76px 44px;
+  padding: 77px 8px 86px 100px;
+  background-color: rgba(196, 196, 196, 0.05);
+}
+
+.input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
+}
+
+.input__title {
+  font-family: 'Inter';
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 48px;
+}
+
+.input__btn {
+  width: 197px;
+  height: 37px;
+  background: #57BF37;
+  color: #ffffff;
+  border-radius: 50px;
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  border: none;
+}
+
+.input__form {
+  font-family: 'Inter';
+  width: 342px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px #E5E5E599 solid;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.input__form::-webkit-input-placeholder {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.input__form:-ms-input-placeholder {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.input__form::-ms-input-placeholder {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.input__form::placeholder {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.input__form::-webkit-outer-spin-button, .input__form::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.input__form:focus {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #E5E5E599;
+  background: transparent;
+  border: none;
+  border-bottom: 1px #E5E5E599 solid;
+  outline: 0;
+}
+
+.input__form:valid {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #E5E5E599;
+}
+
+#errorMessege {
+  font-family: 'Inter';
+  color: #cc3333;
+}
+/*# sourceMappingURL=style.css.map */

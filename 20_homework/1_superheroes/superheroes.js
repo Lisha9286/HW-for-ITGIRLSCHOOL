@@ -96,10 +96,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
         superheroes = JSON.parse(localStorage.getItem("superheroes"));
     else
         superheroes = JSON.parse(superheroesJSON);
-    let superheroCard = "";
     let i = 0
     for (superhero of superheroes) {
-        superheroCard += `<div class="card"><div> <img class="img" src="${superhero.img}" alt="superhero"/></div>
+        document.querySelector('.cards').innerHTML += `<div class="card"><div> <img class="img" src="${superhero.img}" alt="superhero"/></div>
     <div><span class="title">Вселенная:</span> ${superhero.universe}</div>
     <div><span class="title">Имя:</span> ${superhero.heroName}</div>
     <div><span class="title">Альтер-Эго:</span> ${superhero.realName}</div>
@@ -113,7 +112,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 </div></div>`;
         i++;
     }
-    document.querySelector('.cards').innerHTML = superheroCard;
 });
 
 
