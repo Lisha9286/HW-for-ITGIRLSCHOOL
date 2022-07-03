@@ -6,14 +6,12 @@ function check() {
         resultPhone: document.getElementById('phoneID'),
         resultPassword: document.getElementById('passwordID')
     }  
-    let mailFormat = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/
+
     document.getElementById('errorMessege').innerHTML = "";
     if (person.resultName.value == '') {
         document.getElementById('errorMessege').innerHTML += "Enter Username!";
     } else if (person.resultEmail.value == '') {
         document.getElementById('errorMessege').innerHTML += "Enter email!";
-    } else if (person.resultEmail.value.match(mailFormat) = false ) {
-        document.getElementById('errorMessege').innerHTML += "Enter correct email!";
     } else if (person.resultPhone.value == '') {
         document.getElementById('errorMessege').innerHTML += "Enter phone number!";
     } else if (person.resultPhone.value.length <= 11) {
@@ -24,7 +22,7 @@ function check() {
         document.getElementById('errorMessege').innerHTML += "Use 8 characters or more for your password";
     } else if (person.resultConfirm.value == '') {
         document.getElementById('errorMessege').innerHTML += "Repeat password!";
-    } else if (person.resultConfirm.value != resultPassword.value) {
+    } else if (person.resultConfirm.value != person.resultPassword.value) {
         document.getElementById('errorMessege').innerHTML += "Those passwords did'n t match. Try again.";
     }
     return person          

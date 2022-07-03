@@ -20,20 +20,17 @@ function check() {
         showErrorMessege.innerHTML += "Enter email!";
     } else if (!person.resultEmail.value.match(mailFormat)) {
         showErrorMessege.innerHTML += "Enter correct email!";
-        return false;
     } else if (person.resultPhone.value == '') {
         showErrorMessege.innerHTML += "Enter phone number!";
     } else if (!person.resultPhone.value.match(phoneFormat)) {
         showErrorMessege.innerHTML += "Enter correct phone number!";
-        return false;
     } else if (person.resultPassword.value == '') {
         showErrorMessege.innerHTML += "Create password!";
     } else if (!person.resultPassword.value.match(passwordFormat)) {
         showErrorMessege.innerHTML += "Passwords must contain:<br/> a minimum of 1 lower case letter [a-z] and<br/> a minimum of 1 upper case letter [A-Z] and<br/> a minimum of 1 numeric character [0-9] and<br/> a minimum of special character.";
-        return false;
     } else if (person.resultConfirm.value == '') {
         showErrorMessege.innerHTML += "Repeat password!";
-    } else if (person.resultConfirm.value != resultPassword.value) {
+    } else if (person.resultConfirm.value != person.resultPassword.value) {
         showErrorMessege.innerHTML += "Those passwords did'n t match. Try again.";
     }
     return person
