@@ -35,6 +35,27 @@ function check() {
         showErrorMessege.innerHTML += "Repeat password!";
     } else if (person.resultConfirm.value != resultPassword.value) {
         showErrorMessege.innerHTML += "Those passwords did'n t match. Try again.";
+    } else {
+        const user = {
+            name: document.querySelector('#nameID').value,
+            email: document.querySelector('#emailID').value,
+            phone: document.querySelector('#phoneID').value,
+            password: document.querySelector('#passwordID').value
+        }
+        fetch('https://httpbin.org/post', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json;charset=utf-8'
+                },
+                body: JSON.stringify(user),
+            })
+
+            .then(response => response.json())
+            .then(user => {
+                console.log(user);
+            })
+            .catch(error => console.log(error));
     }
-    return person
+
+    
 }
