@@ -132,7 +132,7 @@ const moment = require('moment');
 let date = moment().format('lll');
 document.querySelector('#date').innerHTML += date;
 
-//всплытие блоков
+
 AOS.init();
 },{"chart.js":2,"moment":3}],2:[function(require,module,exports){
 /*!

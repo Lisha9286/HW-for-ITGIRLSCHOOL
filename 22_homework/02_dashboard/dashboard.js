@@ -131,5 +131,5 @@ const moment = require('moment');
 let date = moment().format('lll');
 document.querySelector('#date').innerHTML += date;
 
-import 'css-doodle';
+
 AOS.init();
