@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Total Sales",
+        "result": "$5k",
+        "diffYesterday":"+10%",
+        "img": "style/img/total_sales.png"
+    },
+    {
+        "name": "Total Order",
+        "result": "500",
+        "diffYesterday":"+8%",
+        "img": "style/img/total_orders.png"
+    },
+    {
+        "name": "Pradact Sold",
+        "result": "9",
+        "diffYesterday":"+2%",
+        "img": "style/img/product_orders.png"
+    },
+    {
+        "name": "New Customer",
+        "result": "12",
+        "diffYesterday":"+3%",
+        "img": "style/img/new_customer.png"
+    }
+]

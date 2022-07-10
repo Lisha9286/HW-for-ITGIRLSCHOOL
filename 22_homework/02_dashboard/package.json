@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "aos": "^2.3.4",
+    "chart.js": "^3.8.0",
+    "css-doodle": "^0.28.2",
+    "moment": "^2.29.4"
+  }
+}

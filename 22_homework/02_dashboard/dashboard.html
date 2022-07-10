@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav>
+            <ul>
+                <li class="header__title"><a class="header__link" href=""><img class="header__img"
+                            src="style/img/dashboard.png" />Dashboard</a></li>
+                <li class="header__nav"><a class="header__link" href=""><img class="header__img"
+                            src="style/img/profile.png" />Profile</a></li>
+                <li class="header__nav"><a class="header__link" href=""><img class="header__img"
+                            src="style/img/Leaderboard.png" />Leaderboard</a></li>
+                <li class="header__nav"><a class="header__link" href=""><img class="header__img"
+                            src="style/img/order.png" />Order</a></li>
+                <li class="header__nav"><a class="header__link" href=""><img class="header__img"
+                            src="style/img/product.png" />Product</a></li>
+                <li class="header__nav"><a class="header__link" href=""><img class="header__img"
+                            src="style/img/sales.png" />Sales report</a></li>
+                <li class="header__nav"><a class="header__link" href=""><img class="header__img"
+                            src="style/img/message.png" />Message</a></li>
+                <li class="header__nav"><a class="header__link" href=""><img class="header__img"
+                            src="style/img/settings.png" />Setting</a></li>
+                <li class="header__nav"><a class="header__link" href=""><img class="header__img"
+                            src="style/img/favourite.png" />Favourite</a></li>
+                <li class="header__nav"><a class="header__link" href=""><img class="header__img"
+                            src="style/img/history.png" />History</a></li>
+                <li class="header__nav"><a class="header__link" href=""><img class="header__img"
+                            src="style/img/singout.png" />Signout</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+        <div class="block">
+            <div class="block__search">
+                <div class="block__btn"><img src="style/img/search.png"></div>
+                <input class="block__input" type="text" placeholder="Search here..." />
+            </div>
+            <img class="block__profile" src="style/img/sidebars.png" />
+
+            <div class="block__banner"><img class="block__banner_img" src="style/img/banner.jpg"/></div>
+
+            <div class="block__product">
+                <p class="block__title">Sales <span id="date"></span></p>
+                <p class="block__subtitle">Sales Summary</p>
+                <div class="block__cards" id="cards">
+                </div>
+            </div>
+
+            <div class="block__level">
+                <p class="block__title">Level</p>
+                <canvas id="level"></canvas>
+            </div>
+
+            <div class="block__top" data-aos="fade-up">
+                <p class="block__title">Top Products</p>
+            </div>
+
+            <div data-aos="fade-up" class="block__fullfilment">
+                <p class="block__title">Customer Fulfilment</p>
+                <canvas id="lastMonth"></canvas>
+                <canvas id="thisMonth"></canvas>
+            </div>
+
+        </div>
+        <script src="bundle.js"></script>
+        <script src="aos.js"></script>
+    </main>
+</body>
+
+</html>
