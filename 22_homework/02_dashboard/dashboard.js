@@ -1,10 +1,11 @@
 let cards
 
+
 document.addEventListener("DOMContentLoaded", async function () {
-    AOS.init();
     let url = 'dashboard.json';
     let response = await fetch(url);
     cards = await response.json();
+    
     let i = 0
 
     for (card of cards) {
@@ -16,11 +17,15 @@ document.addEventListener("DOMContentLoaded", async function () {
 </div>`
         i++;
     }
+    AOS.init();
     time();
     chart();
 });
 
-function chart() {
+async function chart() {
+    let url = 'info.json';
+    let response = await fetch(url);
+    info = await response.json();
     const Chart = require('chart.js');
 
     // графики линейные
@@ -36,7 +41,7 @@ function chart() {
     const dataLine = {
         labels: labels,
         datasets: [{
-            label: 'Last Month $4,087',
+            label: `Last Month ${info.lastMonthPrice}`,
             backgroundColor: 'rgb(169, 223, 216)',
             borderColor: 'rgb(169, 223, 216)',
             data: [0, 10, 5, 2, 20, 30],
@@ -46,7 +51,7 @@ function chart() {
     const dataNewLine = {
         labels: labels,
         datasets: [{
-            label: 'This Month $5,506',
+            label: `This Month ${info.thisMonthPrice}`,
             backgroundColor: 'rgba(242, 200, 237, 1)',
             borderColor: 'rgba(242, 200, 237, 1)',
             data: [30, 27, 24, 28, 22, 30],
