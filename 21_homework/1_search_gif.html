@@ -20,11 +20,11 @@
     <input type="text" name="search" id="search">
     <button onclick="searchGIF()">Поиск</button>
     <div id="gifContainer">
-        
+
     </div>
     <script>
-        
         function searchGIF(search) {
+
             search = document.querySelector('#search').value;
             document.querySelector('#gifContainer').innerHTML = "";
             fetch(`https://api.giphy.com/v1/gifs/search?api_key=UrHAPa1LmKqUvmSBvlQcSMYMAh1ZeyPs&q=${search}&limit=5`)
@@ -33,9 +33,18 @@
                     console.log(data);
                     let gifs = data.data;
                     console.log(gifs)
-                    for (gif of gifs) {
-                        document.querySelector('#gifContainer').innerHTML += `<img src="${gif.images.fixed_height.url}" alt="gif"/>`
+                    try {
+                        for (gif of gifs) {
+                            document.querySelector('#gifContainer').innerHTML +=
+                                `<img src="${gif.images.fixed_height.url}" alt="gif"/>`
+                        }
+                        if (gif.leght){
+                            return false
+                        }
+                    } catch {
+                        alert("Упс, кажется, задан пустой запрос!")
                     }
+
                 })
                 .catch(error => console.log(error));
         }
