@@ -7,6 +7,10 @@ body {
   grid-template: 1fr/160px 1fr;
 }
 
+a {
+  text-decoration: none;
+}
+
 .header {
   width: 160px;
   height: 100%;
@@ -18,7 +22,6 @@ body {
   font-size: 12px;
 }
 .header__link {
-  text-decoration: none;
   color: rgb(135, 136, 140);
 }
 .header__title {
@@ -29,6 +32,9 @@ body {
   font-size: 12px;
   font-weight: 600;
   margin: 0 20px 0 -20px;
+}
+.header__title a {
+  color: rgb(23, 24, 33);
 }
 .header__img {
   margin-right: 9px;
